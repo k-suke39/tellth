@@ -1,0 +1,25 @@
+<section class="l-content-fixed section">
+  <header class="section-header">
+    <h2 class="section-title">新規登録</h2>
+    <p class="section-subtitle">SignUp</p>
+  </header>
+  <div class="section-form">
+    <%= form_with url: "/signup", class: "form-simple" do |f| %>
+      <%= f.label "名前", class: "form-label"%>
+      <p class="form-input">
+        <%= f.text_field :name, placeholder: "sample太郎"%>
+      </p>
+      <%= f.label "メールアドレス", class: "form-label"%>
+      <p class="form-input">
+        <%= f.text_field :email, placeholder: "sample@sample.com"%>
+      </p>
+      <%= f.label "パスワード", class: "form-label"%>
+      <p class="form-input">
+        <%= f.text_field :password%>
+      </p>
+      <p class="form-btn-holder">
+        <%= f.button "SignUp", type: "submit", class: "btn"%>
+      </p>
+    <% end %>
+  </div>
+<section>

@@ -13,6 +13,11 @@
   <body>
     <div id="container">
       <%= render "/layouts/header"%>
+      <% if flash[:notice]%>
+      <div class="l-content-fixed flash">
+        <%= flash[:notice]%>
+      </div>
+      <% end %>
       <%= yield %>
       <%= render "/layouts/footer"%>
     </div>
