@@ -32,6 +32,13 @@ a {
 .l-content-fixed {
   width: 980px;
   margin: 0 auto;
+  border: solid;
+}
+
+.l-content-expanded {
+  width: auto;
+  margin: 0;
+  border: solid;
 }
 
 /* header */
@@ -40,7 +47,6 @@ a {
   align-items: center;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  border: solid;
   justify-content: space-between;
 }
 
@@ -61,5 +67,19 @@ a {
 
 .nav-menu-item a {
   color: #333;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: skyblue;
+}
+
+.footer-content {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.footer-copy {
+  color: whitesmoke;
   font-weight: bold;
 }
