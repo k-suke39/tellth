@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+
   end
 
   def show
@@ -11,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(title: params[:title], content: params[:content])
+    post = Post.new(title: params[:title], content: params[:content], user_id: @current_user.id)
 
     if post.save
       flash[:notice] = "質問作成に成功しました"

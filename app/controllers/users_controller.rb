@@ -11,8 +11,9 @@ class UsersController < ApplicationController
     user = User.new(name: params[:name], email: params[:email], password: params[:password])
     debugger
     if user.save
+      session[:user_id] = user.id
       flash[:notice] = "ユーザ登録に成功しました"
-      redirect_to "/users/index"
+      redirect_to "/posts"
     end
   end
 
@@ -22,11 +23,10 @@ class UsersController < ApplicationController
 
   def login
     user = User.find_by(email: params[:email])
-    
     if user.password == params[:password]
       session[:user_id] = user.id
       flash[:notice] = "ログインに成功しました"
-      redirect_to "/users/index"
+      redirect_to "/posts"
     end
   end
 
