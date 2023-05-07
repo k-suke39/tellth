@@ -11,4 +11,22 @@
         <%= "内容 : #{@post.content}"%>
       </p>
   </div>
+
+  <div class="section-question">
+    <%= form_with model: [@post, @comment], data: {"turbo-method": :post} do |f|%>
+      <p class="section-question-title">
+        <%= f.label "コメント"%>
+        <%= f.text_field :content%>
+      </p>
+      <%= f.submit "コメントする"%>
+    <% end %>
+  </div>
+
+    <div class="section-question">
+      <% @comments.each do |comment|%>
+      <p class="section-question-title">
+        <%= comment.content %>
+      </p>
+      <% end %>
+  </div>
 <section>
