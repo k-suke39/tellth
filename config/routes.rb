@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+  get 'posts/new'
+  get 'posts/edit'
   root :to => 'home#top'
   #Users
   get '/signup' => 'users#new'
@@ -7,4 +10,6 @@ Rails.application.routes.draw do
   post '/login' => 'users#login'
   post '/logout' => 'users#logout'
   get  '/users/index' => 'users#index'
+
+  resources :posts
 end
