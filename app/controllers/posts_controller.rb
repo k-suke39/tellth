@@ -10,6 +10,15 @@ class PostsController < ApplicationController
   def new
   end
 
+  def create
+    post = Post.new(title: params[:title], content: params[:content])
+
+    if post.save
+      flash[:notice] = "質問作成に成功しました"
+      redirect_to  "/posts"
+    end
+  end
+
   def edit
      @post = Post.find(params[:id])
   end
