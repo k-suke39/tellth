@@ -1,2 +1,21 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<section class="l-content-fixed section">
+  <header class="section-header">
+    <h2 class="section-title">編集</h2>
+    <p class="section-subtitle">Edit</p>
+  </header>
+  <div class="section-form">
+    <%= form_with model: @post, class: "form-simple" do |f| %>
+      <%= f.label "タイトル", class: "form-label"%>
+      <p class="form-input">
+        <%= f.text_field :title, placeholder: @post.title%>
+      </p>
+      <%= f.label "質問内容", class: "form-label"%>
+      <p class="form-input">
+        <%= f.text_field :content, placeholder: @post.content%>
+      </p>
+      <p class="form-btn-holder">
+        <%= f.button "更新", type: "submit", class: "btn"%>
+      </p>
+    <% end %>
+  </div>
+<section>
