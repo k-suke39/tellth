@@ -16,7 +16,8 @@
 						<td><span class="table-list-icon">未解決</span></td>
 						<td class="table-list-date"><time datetime="2018-09-13">2018.09.13</time></td>
 						<td class="table-list-link"><a href="20180913.html"><%= link_to(post.title, post)%></a></td>
-                        <td><span class="table-list-status"><%= link_to("編集",edit_post_path(post))%></span></td>
+                        <td><span class="table-list-status-edit"><%= link_to("編集",edit_post_path(post))%></span></td>
+						<td><span class="table-list-status-delete"><%= link_to("削除", post_path(post), data: {"turbo-method": :delete})%></span></td>
 					</tr>
                      <% end %>
 				</tbody>

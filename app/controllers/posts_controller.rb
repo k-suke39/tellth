@@ -22,4 +22,12 @@ class PostsController < ApplicationController
       redirect_to "/posts"
      end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:notice] = "削除に成功しました"
+      redirect_to "/posts"
+    end
+  end
 end
