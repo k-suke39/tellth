@@ -211,6 +211,20 @@ a {
   font-weight: bold;
   text-align: center;
 }
+
+.table-list-status {
+  display: inline-block;
+  width: 6em;
+  padding: 0.2em 1.2em;
+  border-radius: 0.5em;
+  background-color: palegreen;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 .table-list-date time {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
