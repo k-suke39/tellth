@@ -2,8 +2,12 @@
   <h1 class="header-logo">STON</h1>
   <nav class="nav">
     <ul class="nav-menu">
-      <li class="nav-menu-item"><a href="/">新規登録</a></li>
-      <li class="nav-menu-item"><a href="/">ログイン</a></li>
+      <% if is_logined? %>
+        <li class="nav-menu-item"><%= link_to('ログアウト', "/logout", data: { "turbo-method": :post })%></li>
+      <% else%>
+        <li class="nav-menu-item"><%= link_to('新規登録', "/signup")%></li>
+        <li class="nav-menu-item"><%= link_to('ログイン', "/login")%></li>
+      <% end %>
       <li class="nav-menu-item"><a href="/">お問い合わせ</a></li>
     </ul>
   </nav>
